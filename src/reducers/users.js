@@ -7,4 +7,5 @@ export default function(state = [], action){
         case FETCH_USERS:
             return [ ...state, ...action.payload ];
     }
+    return state
 }
