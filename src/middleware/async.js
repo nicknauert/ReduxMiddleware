@@ -9,8 +9,9 @@ export default function({ dispatch }){
 
     action.payload
       .then( function(res){
-      const newAction = { ...action, payload: res };
-      return dispatch(newAction);
+      const newAction = { ...action, payload: res.data };
+      console.log(newAction.payload);
+      dispatch(newAction);
     });
   }
 }
